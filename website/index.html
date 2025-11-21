@@ -1,36 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stars, Streets, and Sleep</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <title>Stars, Streets, and Sleep</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Intro Section -->
-    <section id="intro">
-        <h1>Stars, Streets, and Sleep</h1>
-        <p>Linking Light Pollution to Dream Emotion</p>
-    </section>
+  <header>
+    <h1>Stars, Streets, and Sleep</h1>
+    <p>Prototype</p>
+  </header>
 
-    <!-- VIIRS Trends Chart -->
-    <section id="viirs-trends">
-        <h2>Nighttime Light Trends</h2>
-        <div id="viirs-chart">[Your VIIRS chart will go here]</div>
-    </section>
 
-    <!-- Dream Sentiment Chart -->
-    <section id="dream-sentiment">
-        <h2>Dream Sentiment Analysis</h2>
-        <div id="dream-chart">[Your Dream Sentiment chart will go here]</div>
-    </section>
+  <section id="overview">
+    <h2>Overview</h2>
+    <p>Exploring how city-level nighttime light trends relate to sentiment and content in dreams in Toronto & Mississauga, 2024–2025.</p>
+  </section>
 
-    <!-- Future Visualization Idea -->
-    <section id="future-viz">
-        <h2>Future Visualization</h2>
-        <div id="future-chart">[Sketch or mockup goes here]</div>
-    </section>
+  <section id="design">
+    <h2>Design Rationale</h2>
+    <p>I chose charts that let users explore light intensity and dream emotion patterns side-by-side, so it’s easy to see how they might relate.</p>
+  </section>
 
-    <script src="script.js"></script>
+
+  <section id="visualizations">
+  <div class="content-box">
+    <h2>Dream Sentiment (2024)</h2>
+    <p>How dream emotion patterns relate to night light cycles in Toronto & Mississauga.</p>
+
+    <div id="radial-emotion-chart"></div> <!-- your D3 visual -->
+  </div>
+</section>
+
+  <script src="../visuals/radial_emotion_chart/radial_emotion.js"></script>
+  <script src="script.js"></script>
 </body>
-</html>
