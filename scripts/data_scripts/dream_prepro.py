@@ -7,16 +7,14 @@ with open('dreams.json', 'r') as file:
 
 rows = []
 
-
+# make syntehtic data
 for record in data['records']:
     dreamer = record['dreamer']
-    # Get info at the dreamer level
     gender = dreamer.get('gender')
     city_dreamer = dreamer.get('city')
     admin1 = dreamer.get('admin1')
     country_code = dreamer.get('country_code')
 
-    # dreams per dreamer
     for dream in record['dreams']:
         row = {
             "date": dream.get("date"),

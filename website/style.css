@@ -6,10 +6,10 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
   
-  /* Body & background */
+  
   body {
-    background: #0a0a2a; /* deep night blue */
-    color: #f0f0f0;      /* light text for contrast */
+    background: #0a0a2a; 
+    color: #f0f0f0;      
     line-height: 1.6;
     font-size: 16px;
   }
@@ -33,12 +33,10 @@
   }
   
   /* Section styles */
-  section {
-    max-width: 1000px;
-    margin: 2rem auto;
-    padding: 1.5rem;
-    background: rgba(20, 20, 60, 0.7); /* slightly translucent panels */
-    border-radius: 12px;
+  .section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   
   /* Section titles */
@@ -92,7 +90,8 @@
     text-decoration: underline;
   }
   
-  /* Smooth scrolling for internal links */
-  html {
-    scroll-behavior: smooth;
+
+  html, body {
+    height: 100%;
+    overflow: hidden; /* required for fullPage */
   }

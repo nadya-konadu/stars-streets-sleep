@@ -3,37 +3,76 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://d3js.org/d3.v7.min.js"></script>
+
   <title>Stars, Streets, and Sleep</title>
+
+  <!-- fullPage.js CSS -->
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/fullpage.js/dist/fullpage.min.css" />
+
+  <!-- Your CSS -->
   <link rel="stylesheet" href="style.css">
+
+  <!-- D3 -->
+  <script src="https://d3js.org/d3.v7.min.js"></script>
 </head>
+
 <body>
-  <header>
-    <h1>Stars, Streets, and Sleep</h1>
-    <p>Prototype</p>
-  </header>
 
+  <div id="fullpage">
 
-  <section id="overview">
-    <h2>Overview</h2>
-    <p>Exploring how city-level nighttime light trends relate to sentiment and content in dreams in Toronto & Mississauga, 2024–2025.</p>
-  </section>
+    <!-- SECTION 1: HERO -->
+    <div class="section">
+      <header>
+        <h1>Stars, Streets, and Sleep</h1>
+        <p>Prototype</p>
+      </header>
+    </div>
 
-  <section id="design">
-    <h2>Design Rationale</h2>
-    <p>I chose charts that let users explore light intensity and dream emotion patterns side-by-side, so it’s easy to see how they might relate.</p>
-  </section>
+    <!-- SECTION 2: OVERVIEW -->
+    <div class="section">
+      <section id="overview">
+        <h2>Overview</h2>
+        <p>
+          Exploring how city-level nighttime light trends relate to sentiment
+          and content in dreams in Toronto & Mississauga, 2024–2025.
+        </p>
+      </section>
+    </div>
 
+    <!-- SECTION 3: VISUALIZATION -->
+    <div class="section">
+      <section id="visualizations">
+        <div class="content-box">
+          <h2>Dream Sentiment (2024)</h2>
+          <p>
+            How dream emotion patterns relate to night light cycles in
+            Toronto & Mississauga.
+          </p>
 
-  <section id="visualizations">
-  <div class="content-box">
-    <h2>Dream Sentiment (2024)</h2>
-    <p>How dream emotion patterns relate to night light cycles in Toronto & Mississauga.</p>
+          <div id="radial-emotion-chart"></div>
+        </div>
+      </section>
+    </div>
 
-    <div id="radial-emotion-chart"></div> <!-- your D3 visual -->
   </div>
-</section>
 
+  <!-- fullPage.js -->
+  <script src="https://cdn.jsdelivr.net/npm/fullpage.js/dist/fullpage.min.js"></script>
+
+  <!-- Initialize fullPage -->
+  <script>
+    new fullpage('#fullpage', {
+      autoScrolling: true,
+      fitToSection: true,
+      scrollingSpeed: 800,
+      navigation: true
+    });
+  </script>
+
+  <!-- Your existing scripts -->
   <script src="../visuals/radial_emotion_chart/radial_emotion.js"></script>
   <script src="script.js"></script>
+
 </body>
+</html>
