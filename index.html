@@ -1,16 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <link rel="icon" href="data:,">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Stars, Streets, and Sleep</title>
 
-  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Inter:wght@300;400&display=swap" rel="stylesheet">
 
-  <!-- Your CSS -->
   <link rel="stylesheet" href="website/css/base.css">
   <link rel="stylesheet" href="website/css/themes.css">
   <link rel="stylesheet" href="website/css/layout.css">
@@ -22,13 +19,10 @@
 
 <div id="fullpage">
 
-  <!-- HERO -->
   <section class="section section-night">
     <div class="container">
       <header class="hero-header">
-        <h1 class="hero-title">
-          Stars, Streets, and<br>Sleep
-        </h1>
+        <h1 class="hero-title">Stars, Streets, and<br>Sleep</h1>
         <p class="hero-subtitle">
           Linking Nighttime Light in Mississauga to Dream Emotion
         </p>
@@ -36,23 +30,18 @@
     </div>
   </section>
 
-  <!-- WHY THIS MATTERS -->
   <section class="section section-light">
     <div class="container intro-grid">
 
-      <!-- TEXT -->
       <div>
         <h2>Dreaming is a universal human experience.</h2>
-        <p>
-          Across a lifetime, people spend about six years dreaming.
-        </p>
+        <p>Across a lifetime, people spend about six years dreaming.</p>
         <p>
           Yet while sleep has been widely studied, far less is known about how our
           surroundings shape what we dream and how those dreams feel.
         </p>
       </div>
 
-      <!-- IMAGE -->
       <div class="editorial-image-wrap">
         <img src="data.png" alt="Nighttime light patterns" class="editorial-image">
       </div>
@@ -60,13 +49,10 @@
     </div>
   </section>
 
-  <!-- NIGHTTIME LIGHTS: MISSISSAUGA -->
   <section class="section section-night">
     <div class="container">
       <h2>Nighttime Light in Mississauga</h2>
-      
 
-      <!-- D3 MAP GOES HERE -->
       <svg id="missi-map" width="500" height="700"></svg>
       <div id="month-label" class="month-label">January</div>
       <div id="month-slider"></div>
@@ -74,111 +60,94 @@
 
     <div class="map-text">
       <h2>One surrounding factor is light.</h2>
-
       <p>
-        In many modern cities, streetlights, buildings, and illuminated infrastructure brighten the night.
-        This artificial brightness becomes a consistent part of the nighttime environment after dark.
+        In many modern cities, streetlights, buildings, and illuminated infrastructure
+        brighten the night.
       </p>
-
       <p>
         The map shows how bright the night is in Mississauga across the year 2025.
       </p>
     </div>
-
-  </div>
-
-</div>
   </section>
 
-  <!-- QUESTION / NEXT SECTION -->
   <section class="section section-light">
     <div class="container">
       <h2>Connecting Nighttime Light and Dream</h2>
-  
       <p>
         To explore how the nighttime environment relates to dreaming, this project
-        draws on self-reported dream descriptions from 
+        draws on self-reported dream descriptions from
         <a href="https://thedreamdrop.com" target="_blank" class="dreamdrop-link">
-          <span>The Dream Drop</span>
-        </a>
-        collected through 2025 in Mississauga. These reports capture not only what people dream about,
-        but also the emotional tone of those dreams.
+          The Dream Drop
+        </a>.
       </p>
     </div>
   </section>
 
-
-  <!-- DREAM EMOTION OVERVIEW -->
-<section class="section section-night">
-  <div class="container">
-
-    <h2>What Do Dreams Feel Like?</h2>
-    <p id="emotion-subtitle">Emotion breakdown — Month</p>
-
-  </div>
-
-    <!-- DREAM EMOTION VISUAL GOES HERE -->
-    <!-- LEFT: reserved for bar chart -->
-  <div class="container two-col-text">
-    <div class="vis-left">
-      <svg id="emotion-bar-chart"></svg>
-    </div>
-    <!-- RIGHT: stacked area chart -->
-    <div class="vis-right">
-      <svg id="dream-emotion-chart"></svg>
-    </div>
-  </div>
-</section>
-
-<!-- EXPLORING LIGHT WITH DREAMS -->
-<section class="section section-light">
-  <div class="container">
-
-    <h2>Exploring Light and Dream Emotion</h2>
-
-    <p class="section-lede">
-      How emotional tone of dreams connect to nighttime light?
-    </p>
-
-    <!-- LIGHT + DREAM ALIGNMENT -->
-    <div class="vis-stack">
-      <!-- Light over time -->
-      <svg id="light-timeseries"></svg>
-
-      <!-- Dream emotion over time (already built) -->
-      <!-- This references the SAME month logic -->
-      <!-- No duplication of interaction -->
+  <section class="section section-night">
+    <div class="container">
+      <h2>What Do Dreams Feel Like?</h2>
+      <p id="emotion-subtitle">Emotion breakdown — Month</p>
     </div>
 
-  </div>
-</section>
+    <div class="container two-col-text">
+      <div class="vis-left">
+        <svg id="emotion-bar-chart"></svg>
+      </div>
+      <div class="vis-right">
+        <svg id="dream-emotion-chart"></svg>
+      </div>
+    </div>
+  </section>
 
-  <!-- EMERGING PATTERNS -->
-<section class="section section-night">
-  <div class="container">
+  <section class="section section-night">
+    <div class="container">
+      <h2>Dream Emotions Across Nighttime Light</h2>
+      <p class="section-lede">
+        Comparing the most common dream emotions under low, medium, and high nighttime light.
+      </p>
+      <h2 class="location-label">Mississauga:</h2>
 
-    <h2>Emerging Patterns</h2>
+      <div class="radial-wrap">
+        <div id="radial-small-multiples"></div>
+        <div id="emotion-legend"></div>
+      </div>
+    </div>
+  </section>
 
-    <p class="section-lede">
-      Looking across the year, changes in nighttime brightness and dream emotion begin to align in subtle but meaningful ways.
-    </p>
-    
+  <section class="section section-night">
+    <div class="container">
+      <h2>Data Sources & Limitations</h2>
 
-  </div>
-</section>
+      <p class="section-lede">
+        This project combines environmental satellite data with self-reported dream
+        records to explore possible relationships between nighttime light and dream emotion.
+      </p>
 
+      <p>
+        Nighttime light measurements were derived from monthly average radiance composites
+        from the <strong>VIIRS Day/Night Band (DNB)</strong> satellite product.
+      </p>
+
+      <p>
+        Dream data were drawn from
+        <a href="https://thedreamdrop.com" target="_blank" class="dreamdrop-link">
+          The Dream Drop
+        </a>.
+      </p>
+
+      <p>
+        These patterns are exploratory and should not be interpreted as causal.
+      </p>
+    </div>
+  </section>
 
 </div>
 
-<!-- LOAD D3 FIRST -->
 <script src="https://d3js.org/d3.v4.js"></script>
-
-<!-- THEN YOUR CUSTOM MAP SCRIPT -->
 <script src="visuals/monthSlider.js"></script>
 <script src="visuals/missi_map.js"></script>
 <script src="visuals/dream_emotion_chart.js"></script>
-
-
+<script src="visuals/radial_emotion.js"></script>
 
 </body>
 </html>

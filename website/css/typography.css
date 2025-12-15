@@ -1,6 +1,3 @@
-/* =========================
-   HERO TEXT
-========================= */
 .hero-title {
   font-family: 'Playfair Display', serif;
   font-size: clamp(4.5rem, 8vw, 7.5rem);
@@ -8,13 +5,11 @@
   letter-spacing: 0.04em;
   line-height: 1.15;
   color: #f1ecff;
-
   text-shadow:
     0 0 2px rgba(255,255,255,0.6),
     0 0 10px rgba(200,185,255,0.55),
     0 0 28px rgba(170,160,255,0.35),
     0 0 90px rgba(120,130,255,0.25);
-
   margin-bottom: 1.2rem;
 }
 
@@ -23,16 +18,12 @@
   font-weight: 300;
   letter-spacing: 0.08em;
   color: #84dcff;
-
   text-shadow:
     0 0 3px rgba(220,245,255,0.45),
     0 0 14px rgba(150,210,255,0.35),
     0 0 40px rgba(120,180,255,0.25);
 }
 
-/* =========================
-   HEADERS & BODY TEXT
-========================= */
 h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
@@ -53,10 +44,8 @@ p {
   color: #cbd5ff;
 }
 
-
-/* Dream Drop link styling */
 .dreamdrop-link {
-  color: #b09aff;               /* matches your map stroke */
+  color: #b09aff;
   text-decoration: none;
   font-weight: 500;
   transition: color 0.25s ease;
@@ -73,4 +62,11 @@ p {
   color: #9aa3ff;
 }
 
-  
+.section-lede {
+  max-width: 720px;
+  margin-top: 14px;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #dbe7ff;
+  opacity: 0.9;
+}
