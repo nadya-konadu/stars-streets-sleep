@@ -1,0 +1,76 @@
+/* =========================
+   HERO TEXT
+========================= */
+.hero-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(4.5rem, 8vw, 7.5rem);
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  line-height: 1.15;
+  color: #f1ecff;
+
+  text-shadow:
+    0 0 2px rgba(255,255,255,0.6),
+    0 0 10px rgba(200,185,255,0.55),
+    0 0 28px rgba(170,160,255,0.35),
+    0 0 90px rgba(120,130,255,0.25);
+
+  margin-bottom: 1.2rem;
+}
+
+.hero-subtitle {
+  font-size: clamp(1.1rem, 1.6vw, 1.4rem);
+  font-weight: 300;
+  letter-spacing: 0.08em;
+  color: #84dcff;
+
+  text-shadow:
+    0 0 3px rgba(220,245,255,0.45),
+    0 0 14px rgba(150,210,255,0.35),
+    0 0 40px rgba(120,180,255,0.25);
+}
+
+/* =========================
+   HEADERS & BODY TEXT
+========================= */
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+.month-label {
+  margin-top: 1rem;
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #cbd5ff;
+}
+
+
+/* Dream Drop link styling */
+.dreamdrop-link {
+  color: #b09aff;               /* matches your map stroke */
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.25s ease;
+}
+
+.dreamdrop-link:hover {
+  color: #899dec;
+}
+
+#emotion-subtitle {
+  font-size: 0.9rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #9aa3ff;
+}
+
+  

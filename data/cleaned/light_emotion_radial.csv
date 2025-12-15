@@ -1,0 +1,10 @@
+"light_group","emotion","n","prop","rank"
+"High","confusion",102,0.208588957055215,1
+"Low","confusion",93,0.189024390243902,1
+"Medium","confusion",91,0.184959349593496,1
+"Medium","curiosity",77,0.15650406504065,2
+"Medium","realization",65,0.132113821138211,3
+"High","curiosity",62,0.12678936605317,2
+"Low","excitement",62,0.126016260162602,2
+"High","excitement",60,0.122699386503067,3
+"Low","curiosity",58,0.117886178861789,3

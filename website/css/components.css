@@ -1,0 +1,101 @@
+/* =========================
+   RADIAL CHART
+========================= */
+
+#radial-emotion-chart {
+  background: radial-gradient(circle at center, #1a1a2e, #0d0d16);
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 0 40px rgba(0,0,0,0.6);
+}
+
+#missi-map {
+  display: block;
+  margin-top: 2rem;
+  width: 500px;
+  height: 700px;
+  z-index: 2;
+  position: relative;
+  background: rgba(5, 10, 29, 0.142);
+}
+
+#emotion-bar-chart {
+  display: block;
+  margin-top: 2rem;
+  width: 300px;
+  height: 500px;
+  z-index: 2;
+  position: relative;
+  background: rgba(6, 5, 53, 0.17);
+  border-radius: 8px;
+}
+
+/* =========================
+   LINKS
+========================= */
+
+a {
+  color: #6a7cff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* =========================
+   FULLPAGE NAV DOTS
+========================= */
+
+#fp-nav ul li a span,
+.fp-slidesNav ul li a span {
+  background: #9aa3b2;
+  opacity: 0.75;
+  transition: all 0.3s ease;
+}
+
+#fp-nav ul li a.active span,
+.fp-slidesNav ul li a.active span {
+  background: #e6ebff;
+  opacity: 1;
+  box-shadow: 0 0 8px rgba(180, 190, 255, 0.6);
+}
+/* =========================
+   EDITORIAL IMAGE CARD
+========================= */
+
+.editorial-image-wrap {
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 
+    0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+.editorial-image {
+  width: 100%;
+  height: auto;
+  display: block;
+
+  border-radius: 18px;
+
+  /* soft inset border */
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  /* subtle lift from background */
+  box-shadow:
+    0 8px 30px rgba(0, 0, 0, 0.35),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.03);
+}
+
+.layer {
+  filter: drop-shadow(0 0 8px rgba(160,170,255,0.15));
+}
+
+.axis path,
+.axis line {
+  stroke-opacity: 0.25;
+}
+
+.axis text {
+  letter-spacing: 0.08em;
+}

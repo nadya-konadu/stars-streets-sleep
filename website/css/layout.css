@@ -1,0 +1,76 @@
+/* =========================
+   SECTION LAYOUT
+========================= */
+
+.section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 80px;
+  min-height: 100vh;
+}
+
+/* Constrain inner content */
+.container {
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero-header {
+  text-align: center;
+}
+
+/* =========================
+   INTRO GRID (TEXT LEFT, VISUAL RIGHT)
+========================= */
+
+.intro-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 3.5rem;
+  align-items: center;
+}
+
+/* Text tightening for editorial feel */
+.intro-grid h2 {
+  margin-bottom: 0.75rem;
+}
+
+.intro-grid p {
+  max-width: 520px;
+  margin-bottom: 0.85rem;
+  line-height: 1.55;
+}
+
+.intro-grid p:first-of-type {
+  font-weight: 500;
+}
+
+.two-col-text {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 12px;   /* ← MUCH smaller */
+  align-items: start;
+}
+
+.two-col-vis {
+  display: grid;
+  grid-template-columns: 0.85fr 2.15fr;
+  column-gap: 12px;
+  align-items: start;
+}
+
+
+.vis-left {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.vis-right {
+  display: flex;
+  justify-content: flex-start; /* chart hugs left of right column */
+}

@@ -1,0 +1,111 @@
+---
+title: "visual1_cleaning2"
+output: html_document
+date: "2025-12-15"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(tidyverse)
+
+dreams <- read_csv("/Users/nadyakonadu/Documents/stars-streets-sleep/data/cleaned/mississauga_only.csv")
+
+glimpse(dreams)
+
+```
+
+```{r}
+
+dreams_long <- dreams %>%
+  filter(!is.na(emotions_top3)) %>%
+  separate_rows(emotions_top3, sep = ",\\s*") %>%
+  separate(
+    emotions_top3,
+    into = c("emotion_raw", "weight"),
+    sep = ":",
+    convert = TRUE
+  )
+
+```
+
+```{r}
+emotion_map <- c(
+  # Joy
+  "excitement" = "Joy",
+  "desire" = "Joy",
+  "caring" = "Joy",
+  "approval" = "Joy",
+  "amusement" = "Joy",
+  "relief" = "Joy",
+  "gratitude" = "Joy",
+  "optimism" = "Joy",
+  "admiration" = "Joy",
+
+
+  # Sadness
+  "sadness" = "Sadness",
+  "grief" = "Sadness",
+  "disappointment" = "Sadness",
+  "remorse" = "Sadness",
+
+
+  # Anger
+  "anger" = "Anger",
+  "annoyance" = "Anger",
+  "disapproval" = "Anger",
+  "disgust" = "Anger",
+
+
+  # Fear
+  "fear" = "Fear",
+  "nervousness" = "Fear",
+  "embarrassment"= "Fear",
+
+
+  # Cognitive 
+  "confusion" = "Cognitive",
+  "curiosity" = "Cognitive",
+  "realization" = "Cognitive",
+  "surprise" = "Cognitive"
+
+)
+
+
+```
+
+```{r}
+dreams_cat <- dreams_long %>%
+  mutate(category = emotion_map[emotion_raw]) %>%
+  filter(!is.na(category))
+
+```
+
+
+```{r}
+dream_emotion_month <- dreams_cat %>%
+  group_by(month, category) %>%
+  summarise(weight_sum = sum(weight), .groups = "drop") %>%
+  group_by(month) %>%
+  mutate(prop = weight_sum / sum(weight_sum)) %>%
+  ungroup()
+
+
+```
+
+```{r}
+dream_emotion_month_wide <- dream_emotion_month %>%
+  select(month, category, prop) %>%
+  pivot_wider(
+    names_from = category,
+    values_from = prop,
+    values_fill = 0
+  )
+
+write_csv(dream_emotion_month_wide,"/Users/nadyakonadu/Documents/stars-streets-sleep/data/cleaned/dream_emotion_month_wide.csv")
+```
+
+```{r}
+write_csv(dream_emotion_month_wide,"/Users/nadyakonadu/Documents/stars-streets-sleep/data/cleaned/dream_emotion_month_wide.csv")
