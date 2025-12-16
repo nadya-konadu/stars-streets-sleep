@@ -15,7 +15,6 @@ I cleaned and prepared the data in R, aggregating dream emotions and aligning th
 The site presents interactive visuals that show how the distribution of dream emotions changes across different nighttime light levels. Radial charts are used to emphasize proportional differences between emotions, while categorical layouts allow comparisons across cities and months. The visual design intentionally balances scientific clarity with a softer, dream-like aesthetic.
 
 ## Status
-This project was developed as a course final project and is still being refined. Future iterations may include additional interaction, clearer annotations, and expanded contextual explanation.
-
+This project was developed as a course final project and is still being refined.
 ## Author
 Nadya Konadu
